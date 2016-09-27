@@ -19,7 +19,6 @@ class WechatController extends Controller
         }
         */
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-
         // extract post data
         if (!empty($postStr)){
             /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
@@ -41,8 +40,8 @@ class WechatController extends Controller
             if(!empty( $keyword ))
             {
                 $msgType = "text";
-                $contentStr = "Welcome to wechat world!";
-                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                $content = User::model()->getPresentCode($fromUsername, $keyword);
+                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $content);
                 echo $resultStr;
             }else{
                 echo "Input something...";
