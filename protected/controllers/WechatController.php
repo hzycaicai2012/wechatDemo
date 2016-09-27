@@ -21,6 +21,7 @@ class WechatController extends Controller
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
         // extract post data
         if (!empty($postStr)){
+            Yii::log($postStr, 'info', 'rawInfo');
             /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
                the best way is to check the validity of xml by yourself */
             libxml_disable_entity_loader(true);
@@ -39,8 +40,10 @@ class WechatController extends Controller
 							</xml>";
             if(!empty( $keyword ))
             {
+                Yii::log($keyword, 'info', 'keyword');
                 $msgType = "text";
                 $content = User::model()->getPresentCode($fromUsername, $keyword);
+                Yii::log($content, 'info', 'respond');
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $content);
                 echo $resultStr;
             }else{

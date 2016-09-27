@@ -42,10 +42,10 @@
       <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/WechatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30217028">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.65108514">
+              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding>
-                <marker date="1474987407983" expanded="true" signature="1023:1282" placeholder="..." />
+                <marker date="1474987563733" expanded="true" signature="1074:1333" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -274,10 +274,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/WechatController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30217028">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.65108514">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
           <folding>
-            <marker date="1474987407983" expanded="true" signature="1023:1282" placeholder="..." />
+            <marker date="1474987563733" expanded="true" signature="1074:1333" placeholder="..." />
           </folding>
         </state>
       </provider>
