@@ -8,9 +8,10 @@
 class WechatController extends Controller
 {
     public function actionIndex() {
+
         $check = $this->checkSignature();
         if ($check) {
-            echo $_GET["echostr"];
+            echo isset($_GET["echostr"]) ? $_GET["echostr"] : "";
         } else {
             echo "";
         }
@@ -18,19 +19,23 @@ class WechatController extends Controller
 
     private function checkSignature()
     {
-        $signature = $_GET["signature"];
-        $timestamp = $_GET["timestamp"];
-        $nonce = $_GET["nonce"];
+        try {
+            $signature = $_GET["signature"];
+            $timestamp = $_GET["timestamp"];
+            $nonce = $_GET["nonce"];
 
-        $token = TOKEN;
-        $tmpArr = array($token, $timestamp, $nonce);
-        sort($tmpArr, SORT_STRING);
-        $tmpStr = implode( $tmpArr );
-        $tmpStr = sha1( $tmpStr );
+            $token = TOKEN;
+            $tmpArr = array($token, $timestamp, $nonce);
+            sort($tmpArr, SORT_STRING);
+            $tmpStr = implode( $tmpArr );
+            $tmpStr = sha1( $tmpStr );
 
-        if( $tmpStr == $signature ){
-            return true;
-        }else{
+            if( $tmpStr == $signature ){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (Exception $e) {
             return false;
         }
     }
