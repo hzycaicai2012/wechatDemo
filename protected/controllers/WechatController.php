@@ -78,4 +78,16 @@ class WechatController extends Controller
             return false;
         }
     }
+
+    public function actionLottery() {
+
+    }
+
+    public function actionStartLottery() {
+
+    }
+
+    public function actionStopLottery() {
+
+    }
 }
