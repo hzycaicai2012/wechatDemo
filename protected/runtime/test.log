@@ -1,0 +1,131 @@
+2016/09/27 22:26:34 [info] [test] test
+2016/09/27 22:26:34 [error] [php] Undefined index: HTTP_RAW_POST_DATA (/var/www/html/wechatDemo/protected/controllers/WechatController.php:22)
+Stack trace:
+#0 /var/www/html/wechatDemo/framework/web/CController.php(286): WechatController->runAction()
+#1 /var/www/html/wechatDemo/framework/web/CController.php(265): WechatController->runActionWithFilters()
+#2 /var/www/html/wechatDemo/framework/web/CWebApplication.php(282): WechatController->run()
+#3 /var/www/html/wechatDemo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/wechatDemo/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/wechatDemo/index.php(13): CWebApplication->run()
+REQUEST_URI=/wechatDemo/wechat/index
+2016/09/27 22:26:55 [info] [test] test
+2016/09/27 22:26:55 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986415</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[gggm]]></Content>
+<MsgId>6335018414897350823</MsgId>
+</xml>
+2016/09/27 22:27:45 [info] [test] test
+2016/09/27 22:27:45 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986465</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[fff]]></Content>
+<MsgId>6335018629645715629</MsgId>
+</xml>
+2016/09/27 22:27:45 [info] [test] 
+
+
+
+
+
+
+2016/09/27 22:29:17 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986557</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[ttgz]]></Content>
+<MsgId>6335019024782706878</MsgId>
+</xml>
+2016/09/27 22:29:17 [info] [test] 
+
+
+
+
+
+
+2016/09/27 22:30:06 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986606</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[ggfd]]></Content>
+<MsgId>6335019235236104393</MsgId>
+</xml>
+2016/09/27 22:30:06 [info] [test] oBP0Nwyo0yVtY7sGhkEzYIXY9j9c
+2016/09/27 22:30:59 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986659</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[ddd]]></Content>
+<MsgId>6335019462869371088</MsgId>
+</xml>
+2016/09/27 22:30:59 [info] [test] ddd
+2016/09/27 22:31:51 [info] [test] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474986710</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天天天]]></Content>
+<MsgId>6335019681912703199</MsgId>
+</xml>
+2016/09/27 22:46:58 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474987618</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哈哈哈]]></Content>
+<MsgId>6335023581743008130</MsgId>
+</xml>
+2016/09/27 22:46:58 [info] [keyword] 哈哈哈
+2016/09/27 22:46:58 [info] [respond] WEDDING_GIFT_0001
+2016/09/27 22:47:02 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474987622</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哈哈哈]]></Content>
+<MsgId>6335023598922877316</MsgId>
+</xml>
+2016/09/27 22:47:02 [info] [keyword] 哈哈哈
+2016/09/27 22:47:02 [info] [respond] WEDDING_GIFT_0001
+2016/09/27 22:47:06 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474987625</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[，还好老亮]]></Content>
+<MsgId>6335023611807779206</MsgId>
+</xml>
+2016/09/27 22:47:06 [info] [keyword] ，还好老亮
+2016/09/27 22:47:06 [info] [respond] WEDDING_GIFT_0001
+2016/09/27 22:51:16 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nw1hKsITR0701T7E418YjbdM]]></FromUserName>
+<CreateTime>1474987876</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016/09/27 22:53:43 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nw1hKsITR0701T7E418YjbdM]]></FromUserName>
+<CreateTime>1474988023</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[获取抽奖码]]></Content>
+<MsgId>6335025321204763082</MsgId>
+</xml>
+2016/09/27 22:53:43 [info] [keyword] 获取抽奖码
+2016/09/27 22:53:43 [info] [respond] WEDDING_GIFT_0002
+2016/09/27 22:56:14 [error] [php] Undefined index: HTTP_RAW_POST_DATA (/var/www/html/wechatDemo/protected/controllers/WechatController.php:21)
+Stack trace:
+#0 /var/www/html/wechatDemo/framework/web/CController.php(286): WechatController->runAction()
+#1 /var/www/html/wechatDemo/framework/web/CController.php(265): WechatController->runActionWithFilters()
+#2 /var/www/html/wechatDemo/framework/web/CWebApplication.php(282): WechatController->run()
+#3 /var/www/html/wechatDemo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/wechatDemo/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/wechatDemo/index.php(13): CWebApplication->run()
+REQUEST_URI=/wechatDemo/wechat/index
+2016/09/27 22:57:05 [info] [rawInfo] <xml><ToUserName><![CDATA[gh_72f928cbfb37]]></ToUserName>
+<FromUserName><![CDATA[oBP0Nwyo0yVtY7sGhkEzYIXY9j9c]]></FromUserName>
+<CreateTime>1474988225</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[啦啦啦]]></Content>
+<MsgId>6335026188788156903</MsgId>
+</xml>
+2016/09/27 22:57:05 [info] [keyword] 啦啦啦
+2016/09/27 22:57:05 [info] [respond] 您的抽奖码是：WEDDING_GIFT_0001

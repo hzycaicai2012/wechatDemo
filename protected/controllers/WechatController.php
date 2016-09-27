@@ -42,7 +42,7 @@ class WechatController extends Controller
             {
                 Yii::log($keyword, 'info', 'keyword');
                 $msgType = "text";
-                $content = User::model()->getPresentCode($fromUsername, $keyword);
+                $content = "您的抽奖码是：" . User::model()->getPresentCode($fromUsername, $keyword);
                 Yii::log($content, 'info', 'respond');
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $content);
                 echo $resultStr;
