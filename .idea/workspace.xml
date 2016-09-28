@@ -39,13 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WechatController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/WechatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.535714">
-              <caret line="85" column="41" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.66611016">
+              <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
               <folding>
-                <marker date="1475079177670" expanded="true" signature="1074:1333" placeholder="..." />
+                <marker date="1475081497825" expanded="true" signature="1074:1333" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/template/smarty3/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7145242">
-              <caret line="103" column="56" selection-start-line="103" selection-start-column="56" selection-end-line="103" selection-end-column="56" />
+            <state vertical-scroll-proportion="-5.107143">
+              <caret line="75" column="80" selection-start-line="75" selection-start-column="66" selection-end-line="75" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/extensions/CSmarty.php" />
         <option value="$PROJECT_DIR$/protected/models/User.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/WechatController.php" />
         <option value="$PROJECT_DIR$/protected/template/smarty3/test.html" />
+        <option value="$PROJECT_DIR$/protected/controllers/WechatController.php" />
       </list>
     </option>
   </component>
@@ -487,7 +487,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
           <folding>
-            <marker date="1475079177670" expanded="true" signature="1074:1333" placeholder="..." />
+            <marker date="1475081497825" expanded="true" signature="1074:1333" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -504,6 +504,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -552,6 +553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,21 +678,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/WechatController.php">
+    <entry file="file://$PROJECT_DIR$/protected/template/smarty3/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.535714">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="41" />
-          <folding>
-            <marker date="1475079177670" expanded="true" signature="1074:1333" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-5.107143">
+          <caret line="75" column="80" selection-start-line="75" selection-start-column="66" selection-end-line="75" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/template/smarty3/test.html">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/WechatController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7145242">
-          <caret line="103" column="56" selection-start-line="103" selection-start-column="56" selection-end-line="103" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.66611016">
+          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+          <folding>
+            <marker date="1475081497825" expanded="true" signature="1074:1333" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

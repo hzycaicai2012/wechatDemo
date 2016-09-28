@@ -88,8 +88,11 @@ class WechatController extends Controller
         echo json_encode(array('errno' => 0, 'data' => $result));
     }
 
-    public function actionStartLottery() {
-
+    public function actionUpdateGiftCode() {
+        $id = intval($_POST['id']);
+        $status = intval($_POST['status']);
+        User::model()->updateByPk($id, array('status' => $status));
+        echo json_encode(array('errno' => 0));
     }
 
     public function actionStopLottery() {

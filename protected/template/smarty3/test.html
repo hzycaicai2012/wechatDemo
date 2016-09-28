@@ -26,7 +26,7 @@
             line-height: 20px;
             border: 1px solid #efefef;
             outline: none;
-            font-size: 14px;
+            font-size: 16px;
             TEXT-ALIGN: CENTER;
             background: #fff;
             /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
@@ -46,6 +46,11 @@
             -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             zoom: 1;
             font-family: "Microsoft YaHei";
+            cursor: pointer;
+        }
+
+        .negative-lottery-btn {
+            background: #888;
         }
 
     </style>
@@ -53,40 +58,48 @@
         $(document).ready(function() {
             $('#gift-lottery').text("test");
             var isRunning = false;
+            var currentCode = null;
+            var finalCode = null;
 
             var getGiftCodes = function(callback) {
                 var url = "http://120.26.119.33/wechatDemo/wechat/getGiftCodeList";
                 $.get(url, function(data){
+                    data = $.parseJSON(data);
                     if (data != null && data.errno == 0) {
                         // codeList = data.data;
                         callback(data.data);
-                    } else {
-                        alert("网络异常");
                     }
                 });
             };
 
-            var updateGiftCode = function() {
-                /*
-                $.post(url,{"data": submit_data,"YII_CSRF_TOKEN":yii_csrf_token_global},function(data){
-                    if(data == "false"){
-                        show_error("请先在微任务上提交");
-                        checked = false;
+            var updateGiftCode = function(code, callback) {
+                var url = "http://120.26.119.33/wechatDemo/wechat/updateGiftCode";
+                $.post(url,{id: code.id, status: 1},function(data){
+                    data = $.parseJSON(data);
+                    if (data != null && data.errno == 0) {
+                        callback();
+                    } else {
+                        alert('网络异常');
                     }
-                    fn(checked)
                 });
-                */
             };
 
             var lotteryInterval;
             var startLottery = function() {
                 if (isRunning) {
                     isRunning = false;
-                    $('#lottery-btn').val('开始');
-                    clearInterval(lotteryInterval);
+                    finalCode = currentCode;
+                    updateGiftCode(finalCode, function() {
+                        $('#lottery-btn').text('开始');
+                        $('#lottery-btn').removeClass('negative-lottery-btn');
+                        clearInterval(lotteryInterval);
+                        $('#gift-lottery').val(finalCode.present_code);
+                    });
+
                 } else {
                     isRunning = true;
-                    $('#lottery-btn').val('停止');
+                    $('#lottery-btn').text('停止');
+                    $('#lottery-btn').addClass('negative-lottery-btn');
                     var giftList = getGiftCodes(initInterval);
                 }
             };
@@ -96,8 +109,9 @@
                     var max = codeList.length;
                     var min = 1;
                     var num = Math.floor(Math.random() * (max - min + min) + min);
-                    var code = codeList[num - 1];// (num > 50 ? "WJ_PRESENT_" : "HZY_GIFT_") + (Array(4).join('0') + num).slice(-4);
-                    $('#gift-lottery').val(code);
+                    currentCode = codeList[num - 1];
+                    // var code = codeList[num - 1];// (num > 50 ? "WJ_PRESENT_" : "HZY_GIFT_") + (Array(4).join('0') + num).slice(-4);
+                    $('#gift-lottery').val(currentCode.present_code);
                 }, 100);
             };
 
