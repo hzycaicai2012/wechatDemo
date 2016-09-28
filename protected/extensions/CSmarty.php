@@ -6,18 +6,21 @@
  * Time: 23:17
  */
 require_once (Yii::getPathOfAlias('application.extensions.smarty') . DIRECTORY_SEPARATOR . 'Smarty.class.php');
-define('SMARTY_TEMPLATE_DIR', Yii::getPathOfAlias('smarty.template'));
-define('SMARTY_PLUGIN_DIR', Yii::getPathOfAlias('smarty.plugin'));
+define('SMARTY_TEMPLATE_DIR', APPLICATION_PATH . 'template/smarty3');
+define('SMARTY_PLUGIN_DIR', Yii::getPathOfAlias('application.extensions.smarty') . DIRECTORY_SEPARATOR . 'custom/');
 class CSmarty extends Smarty {
     const DIR_SEP = DIRECTORY_SEPARATOR;
     function __construct() {
         parent::__construct();
-        $this->template_dir = SMARTY_TEMPLATE_DIR;
+        // Yii::registerAutoloader('smartyAutoload');
+        $this->setTemplateDir(SMARTY_TEMPLATE_DIR);
+        $this->setCompileDir(RUNTIME_PATH . 'template/compile/');
+        $this->setConfigDir(RUNTIME_PATH . 'template/config/');
+        $this->setCacheDir(RUNTIME_PATH . 'template/cache/');
+
+        // $this->template_dir = SMARTY_TEMPLATE_DIR;
         $this->addPluginsDir(SMARTY_PLUGIN_DIR);
-        $this->addConfigDir(Yii::getPathOfAlias('smarty.config'));
-        $this->compile_dir = SMARTY_TEMPLATE_DIR . self::DIR_SEP . 'template_c';
-        //$this->caching = true;
-        $this->cache_dir = SMARTY_TEMPLATE_DIR . self::DIR_SEP . 'cache';
+        // $this->addConfigDir(Yii::getPathOfAlias('smarty.config'));
         $this->left_delimiter = '{%';
         $this->right_delimiter = '%}';
         $this->cache_lifetime = 0;
