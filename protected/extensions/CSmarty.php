@@ -5,13 +5,15 @@
  * Date: 2016/9/27
  * Time: 23:17
  */
-require_once (Yii::getPathOfAlias('application.extensions.smarty') . DIRECTORY_SEPARATOR . 'Smarty.class.php');
+require_once ('smarty/SmartyBC.class.php');
 define('SMARTY_TEMPLATE_DIR', APPLICATION_PATH . 'template/smarty3');
-define('SMARTY_PLUGIN_DIR', Yii::getPathOfAlias('application.extensions.smarty') . DIRECTORY_SEPARATOR . 'custom/');
-class CSmarty extends Smarty {
+define('SMARTY_PLUGIN_DIR', 'smarty/custom/');
+class CSmarty extends SmartyBC {
     const DIR_SEP = DIRECTORY_SEPARATOR;
     function __construct() {
         parent::__construct();
+spl_autoload_unregister(array('Smarty_Autoloader', 'autoload'));
+        Yii::registerAutoloader(array('Smarty_Autoloader', 'autoload'));
         // Yii::registerAutoloader('smartyAutoload');
         $this->setTemplateDir(SMARTY_TEMPLATE_DIR);
         $this->setCompileDir(RUNTIME_PATH . 'template/compile/');
