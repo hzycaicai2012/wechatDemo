@@ -76,8 +76,8 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/template/smarty3/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7462437">
-              <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+            <state vertical-scroll-proportion="-2.2203672">
+              <caret line="8" column="179" selection-start-line="8" selection-start-column="179" selection-end-line="8" selection-end-column="179" />
               <folding />
             </state>
           </provider>
@@ -690,8 +690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/template/smarty3/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7462437">
-          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+        <state vertical-scroll-proportion="-2.2203672">
+          <caret line="8" column="179" selection-start-line="8" selection-start-column="179" selection-end-line="8" selection-end-column="179" />
           <folding />
         </state>
       </provider>
