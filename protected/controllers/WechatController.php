@@ -83,6 +83,11 @@ class WechatController extends Controller
         Yii::app()->smarty->display('test.html');
     }
 
+    public function actionGetGiftCodeList() {
+        $result = User::model()->getCodeList();
+        echo json_encode(array('errno' => 0, 'data' => $result));
+    }
+
     public function actionStartLottery() {
 
     }

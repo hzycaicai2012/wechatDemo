@@ -38,7 +38,23 @@ class User extends CActiveRecord
         }
     }
 
+    public function getCodeList() {
+        $sql = "select * from wc_user where status=0";
+        $command = Yii::app()->db->createCommand($sql);
+        $result = $command->queryAll();
+        return $result;
+    }
+
     private function generatePresentCode($id) {
-        return "WEDDING_GIFT_" . sprintf("%04d", $id);
+        $id = intval($id);
+        if (($id % 2) === 0) {
+            if (($id > 0) && (($id & ($id - 1)) == 0)) {
+                return "SPECIAL_CODE_" . sprintf("%04d", $id);
+            } else {
+                return "WJ_PRESENT_" . sprintf("%04d", $id);
+            }
+        } else {
+            return "HZY_GIFT_" . sprintf("%04d", $id);
+        }
     }
 }

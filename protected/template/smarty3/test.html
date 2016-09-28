@@ -52,7 +52,56 @@
     <script>
         $(document).ready(function() {
             $('#gift-lottery').text("test");
-            $('#lottery-btn').c
+            var isRunning = false;
+
+            var getGiftCodes = function(callback) {
+                var url = "http://120.26.119.33/wechatDemo/wechat/getGiftCodeList";
+                $.get(url, function(data){
+                    if (data != null && data.errno == 0) {
+                        // codeList = data.data;
+                        callback(data.data);
+                    } else {
+                        alert("网络异常");
+                    }
+                });
+            };
+
+            var updateGiftCode = function() {
+                /*
+                $.post(url,{"data": submit_data,"YII_CSRF_TOKEN":yii_csrf_token_global},function(data){
+                    if(data == "false"){
+                        show_error("请先在微任务上提交");
+                        checked = false;
+                    }
+                    fn(checked)
+                });
+                */
+            };
+
+            var lotteryInterval;
+            var startLottery = function() {
+                if (isRunning) {
+                    isRunning = false;
+                    $('#lottery-btn').val('开始');
+                    clearInterval(lotteryInterval);
+                } else {
+                    isRunning = true;
+                    $('#lottery-btn').val('停止');
+                    var giftList = getGiftCodes(initInterval);
+                }
+            };
+
+            var initInterval = function(codeList) {
+                lotteryInterval = setInterval(function () {
+                    var max = codeList.length;
+                    var min = 1;
+                    var num = Math.floor(Math.random() * (max - min + min) + min);
+                    var code = codeList[num - 1];// (num > 50 ? "WJ_PRESENT_" : "HZY_GIFT_") + (Array(4).join('0') + num).slice(-4);
+                    $('#gift-lottery').val(code);
+                }, 100);
+            };
+
+            $('#lottery-btn').on('click', startLottery);
         });
     </script>
 </head>
