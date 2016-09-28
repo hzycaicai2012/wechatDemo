@@ -80,7 +80,7 @@ class WechatController extends Controller
     }
 
     public function actionLottery() {
-
+        Yii::app()->smarty->display('test.html');
     }
 
     public function actionStartLottery() {
